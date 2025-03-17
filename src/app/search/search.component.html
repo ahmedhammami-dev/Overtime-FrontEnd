@@ -1,0 +1,38 @@
+<form #f="ngForm" (ngSubmit)="add(f)">
+  <label for="date" class="form-label">enter dates to search between</label>
+  <input
+    type="text"
+    id="startDate"
+    name="startDate"
+    #startDate="ngModel"
+    class="form-control"
+    placeholder="start date"
+    ngModel
+  />
+  <input
+    name="endDate"
+    #endDate="ngModel"
+    type="text"
+    id="endDate"
+    class="form-control"
+    placeholder="end date"
+    ngModel
+  />
+  <div class="d-grid gap-2">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>price</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let r of res; index as i; first as isFirst; last as islast">
+    <tr>
+      <td>{{ r.firstName }}</td>
+      <td>{{ r.nbHoursSum }}</td>
+    </tr>
+  </tbody>
+</table>
