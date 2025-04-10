@@ -7,11 +7,11 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
-import { ResultComponent } from './result/result.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { ShowComponent } from './show/show.component';
 @NgModule({
-  declarations: [AppComponent, SearchComponent, ResultComponent],
+  declarations: [AppComponent, SearchComponent, ShowComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideHttpClient(), provideClientHydration()],
   bootstrap: [AppComponent],

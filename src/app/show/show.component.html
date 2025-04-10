@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <div class="col-12">
+    <div class="d-grid">
+      <button class="btn btn-primary" type="submit" (click)="showEmployees()">
+        show employees
+      </button>
+    </div>
+  </div>
+  <div class="mt-4">
+    <table class="table table-striped table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>firstName</th>
+          <th>lastName</th>
+          <th>function</th>
+        </tr>
+      </thead>
+      <tbody
+        *ngFor="let r of res; index as i; first as isFirst; last as isLast"
+      >
+        <tr [class.table-primary]="isFirst" [class.table-danger]="isLast">
+          <td>{{ r.firstName }}</td>
+          <td>{{ r.lastName }}</td>
+          <td>{{ r.function }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
